@@ -1,0 +1,129 @@
+function sitchLang(pr) {
+	document.location = (pr != null ? pr : "") + "swithLang?lang="
+			+ $('juLang').value;
+}
+function emailEd(manu, refe) {
+
+	x = screen.width / 2 - 250;
+	y = screen.height / 2 - 215;
+	features = 'scrollbars=yes,width=500,height=400,top=' + y + ',left=' + x;
+	window.open('cnf/email.ed?manu=' + manu + '&refe=' + refe, '', features);
+
+}
+
+function printDiv(id) {
+	var divName = 'dvContent';
+	if(document.getElementById(id) != null){
+		divName = id;
+	}
+	if(document.getElementById(divName) == null){
+		return;
+	}
+
+	var printContents = document.getElementById(divName).innerHTML;
+    var originalContents = document.body.innerHTML;
+
+    document.body.innerHTML = printContents;
+
+    window.print();
+
+    document.body.innerHTML = originalContents;
+}
+
+function printDivs(id) {
+	var printDV = 'dvContent';
+	if(document.getElementById(id) != null){
+		printDV = id;
+	}
+	if(document.getElementById(printDV) == null){
+		return;
+	}
+	
+	
+	
+	var divToPrint = document.getElementById(printDV);
+	 
+	 var headTag = "\n<head>";
+	 headTag += "\n<head>" + '<title></title>';
+	 if (document.getElementsByTagName != null) {
+		 var headTags = document.getElementsByTagName("head");
+		 if (headTags.length > 0) {
+			 //headTag += headTags[0].innerHTML;
+		 }
+			 		 
+	 }
+	 headTag += "</head>\n";
+	 
+	 var dvWidth = document.getElementById(printDV).offsetWidth; 
+	 var dvHeight = document.getElementById(printDV).offsetHeight; 
+	 x = screen.width / 2 - (parseInt(dvWidth) / 2);
+	 y = screen.height / 2 - dvHeight;
+	 features = "scrollbars=yes,menubar=1,width="+dvWidth+",height="+dvHeight+",top="+y+",left="+x;	
+	
+	 var newWin = window.open("", "", features);
+
+	 newWin.document.open();
+	 newWin.document.write("<html>"+headTag+'<body dir="'+document.getElementById('tbHome').dir+'"><div>'+divToPrint.innerHTML+"</div></body></html>");
+	 newWin.document.close();
+	 
+	 newWin.print();
+	 newWin.close();
+}
+
+function printDivd() {
+
+	if(document.getElementById('dvContent') == null)
+		return;
+	
+	var divToPrint = document.getElementById('dvContent');
+	 
+	 var headTag = "\n<head>";
+	 if (document.getElementsByTagName != null) {
+		 var headTags = document.getElementsByTagName("head");
+		 if (headTags.length > 0)
+			 headTag += headTags[0].innerHTML;		 
+	 }
+	 headTag += "</head>\n";
+	 var dvWidth = document.getElementById('dvContent').offsetWidth; 
+	 var dvHeight = document.getElementById('dvContent').offsetHeight; 
+	 x = screen.width / 2 - (parseInt(dvWidth) / 2);
+	 y = screen.height / 2 - dvHeight;
+	 features = "scrollbars=yes,menubar=1,width="+dvWidth+",height="+dvHeight+",top="+y+",left="+x;	
+	
+	 var newWin = window.open("", "", features);
+
+	 newWin.document.open();
+	 newWin.document.write("<html>"+headTag+'<body dir="'+document.getElementById('tbHome').dir+'">'+divToPrint.innerHTML+"</body></html>");
+	 newWin.document.close();
+	 newWin.print();
+	 newWin.close();
+}
+/*
+window.addEvent('domready', function() {
+	showTip();
+});
+function showTip() {
+	if ($$('a.tipz') == "" || $$('a.tipz') == null)
+		return;
+
+	var tipz = new Tips('.tipz', {
+		className : 'tipz',
+		fixed : true,
+		hideDelay : 50,
+		showDelay : 50
+	});
+
+}
+*/
+
+function shDv(id) {
+	if($(id).style.display == "none") {
+		$(id).style.display = "block";
+	}
+	else {
+		$(id).style.display = "none";
+	}
+}
+function saveSocial(id) {
+	
+}

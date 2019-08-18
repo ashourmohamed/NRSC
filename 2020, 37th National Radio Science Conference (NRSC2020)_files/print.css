@@ -1,0 +1,84 @@
+body {
+	font-size: 10pt;
+	margin: 0;
+	background: none;
+}
+@font-face {
+    font-family: bnaz;
+    src: url("./font/bnazanb.ttf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: yekan;
+    src: url("../../incc/css/fonts/yekan.ttf");
+}
+
+#top-out,#footer-out,#copyright-out,#mdmContainer,#footer,#top,#header,#topmenu,#rt-drawer,#rt-rotator,#rt-footer-surround,#top,#print_icon,#p_nav,#delete_col
+	{
+	display: none;
+}
+@page {
+	margin-top: 2cm;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+thead {display: table-header-group;}
+table td {
+	padding: 3px;
+}
+
+.listTable td {
+	border: 1px #999999 solid;
+}
+
+a {
+	text-decoration: none;
+}
+
+element {
+	page-break-before: 10px;
+}
+
+element {
+	page-break-after: 10px;
+}
+
+img {
+	border: 0
+}
+
+.noPrint {
+	display: none;
+}
+
+#dvFrm {
+	display: none;
+}
+
+.titr {
+	font-family: "XB Titre","Titre","B Mitra", lotus;
+	font-size: 35px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+#dvContent{text-align: center;}
+#manu_print {
+	width: 650px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.pathway {
+	display: none;
+}
+
+#oflw {
+	overflow: visible;
+	overflow-y: visible;
+	overflow-x: visible;
+	max-height: 100%;
+}
+#wrap {border: 0;}
+.page_break{ page-break-before: always; }
